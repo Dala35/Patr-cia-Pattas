@@ -1,192 +1,147 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt-AO">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO básico para Google (Luanda) -->
+  <title>Patrícia Pattas - Crochê & Maquiagem Luanda</title>
+  <meta name="description" content="Patrícia Pattas oferece crochê artesanal, roupas de praia, maquiagem e atendimento personalizado em Luanda. Agende seu serviço ou compre online.">
+  <meta name="keywords" content="Crochê, Maquiagem, Luanda, Loja Online, Agendamento WhatsApp, Vestidos, Praia">
+  <meta name="author" content="Patrícia Pattas">
 
-<!-- SEO LOCAL -->
-<title>Patrícia Pattas | Crochê & Maquiagem em Luanda</title>
-<meta name="description" content="Crochê artesanal e maquiagem profissional ao domicílio em Luanda. Loja de produtos e agendamento via WhatsApp.">
-<meta name="keywords" content="crochê Luanda, maquiagem ao domicílio Luanda, moda crochê Angola, loja crochê">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Patrícia Pattas">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        roxo: '#6a0dad',
-        lilas: '#d8b4f8',
-        amarelo: '#f9dc5c',
-        fundo: '#f4f1fa'
-      }
-    }
-  }
-}
-</script>
+  <!-- CSS básico -->
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; }
+    header { background:#ffcccb; padding:20px; text-align:center; }
+    nav a { margin:0 15px; text-decoration:none; color:#333; font-weight:bold; }
+    section { padding:50px 20px; }
+    h2 { color:#b22222; }
+    .gallery img { width:100%; max-width:300px; margin:10px; border-radius:8px; }
+    .products { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+    .product { border:1px solid #ccc; padding:15px; border-radius:8px; width:200px; text-align:center; }
+    .btn-whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; border:none; padding:15px; border-radius:50%; font-size:24px; cursor:pointer; z-index:1000; box-shadow:0 4px 6px rgba(0,0,0,0.3); }
+    form input, form textarea { width:100%; padding:10px; margin:5px 0; border:1px solid #ccc; border-radius:4px; }
+    form button { background:#b22222; color:#fff; padding:10px 20px; border:none; border-radius:4px; cursor:pointer; }
+    iframe { width:100%; border:0; height:400px; border-radius:8px; }
+  </style>
 </head>
-<body class="bg-fundo font-sans text-gray-800">
+<body>
 
-<!-- HERO -->
-<header class="bg-roxo text-white text-center py-14 px-6">
-  <h1 class="text-4xl font-extrabold">Patrícia Pattas</h1>
-  <p class="text-xl mt-2">Crochê artesanal & maquiagem profissional em Luanda</p>
+<!-- Header e Navegação -->
+<header>
+  <h1>Patrícia Pattas - Crochê & Maquiagem</h1>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#loja">Loja</a>
+    <a href="#agendamento">Agendamento</a>
+    <a href="#contato">Contato</a>
+    <a href="#mapa">Localização</a>
+  </nav>
 </header>
 
-<!-- LOJA -->
-<section class="max-w-6xl mx-auto p-6">
-  <h2 class="text-3xl font-bold text-roxo text-center mb-6">Loja de Produtos</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-    
-    <div class="bg-white p-4 rounded-xl shadow">
-      <img src="https://www.facebook.com/photo.php?fbid=1322081068147408&set=pb.100010365824689.-2207520000&type=3" alt="Crochê" class="rounded mb-2">
-      <h3 class="font-bold text-lg">Crochê Artesanal</h3>
-      <p class="text-roxo font-semibold">Preço: 15.000 AOA</p>
-      <button class="add-cart bg-amarelo text-roxo font-bold py-2 px-4 rounded mt-2 w-full">Adicionar ao Carrinho</button>
-    </div>
+<!-- Início -->
+<section id="inicio">
+  <h2>Bem-vindo(a) à Patrícia Pattas</h2>
+  <p>Serviços de crochê artesanal e maquiagem profissional em Luanda. Descubra nossos produtos e agende seu atendimento via WhatsApp.</p>
+</section>
 
-    <div class="bg-white p-4 rounded-xl shadow">
-      <img src="https://www.facebook.com/photo/?fbid=1322081038147411&set=pb.100010365824689.-2207520000" alt="Crochê Praia" class="rounded mb-2">
-      <h3 class="font-bold text-lg">Crochê Praia</h3>
-      <p class="text-roxo font-semibold">Preço: 20.000 AOA</p>
-      <button class="add-cart bg-amarelo text-roxo font-bold py-2 px-4 rounded mt-2 w-full">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="bg-white p-4 rounded-xl shadow">
-      <img src="https://www.facebook.com/photo.php?fbid=1498145333874313&set=pb.100010365824689.-2207520000&type=3" alt="Vestido" class="rounded mb-2">
-      <h3 class="font-bold text-lg">Vestido</h3>
-      <p class="text-roxo font-semibold">Preço: 35.000 AOA</p>
-      <button class="add-cart bg-amarelo text-roxo font-bold py-2 px-4 rounded mt-2 w-full">Adicionar ao Carrinho</button>
-    </div>
-
+<!-- Galeria -->
+<section id="galeria">
+  <h2>Galeria</h2>
+  <div class="gallery">
+    <img src="https://www.facebook.com/photo.php?fbid=1322081068147408&set=pb.100010365824689.-2207520000&type=3" alt="Crochê">
+    <img src="https://www.facebook.com/photo/?fbid=1322081038147411&set=pb.100010365824689.-2207520000" alt="Crochê Praia">
+    <img src="https://www.facebook.com/photo.php?fbid=1498145333874313&set=pb.100010365824689.-2207520000&type=3" alt="Vestido">
   </div>
 </section>
 
-<!-- CARRINHO FLUTUANTE -->
-<div id="cart" class="fixed right-6 bottom-20 bg-white shadow-xl p-4 rounded-xl w-80 max-w-xs hidden">
-  <h3 class="text-xl font-bold mb-2">Carrinho 🛒</h3>
-  <ul id="cart-items" class="space-y-1"></ul>
-  <p class="font-semibold mt-2" id="cart-total">Total: 0 AOA</p>
-  <button id="checkout" class="bg-green-500 text-white w-full py-2 rounded mt-2 font-bold">Finalizar via WhatsApp</button>
-</div>
-
-<!-- FORMULÁRIO AGENDAMENTO -->
-<section class="max-w-4xl mx-auto p-6 mt-12">
-  <h3 class="text-2xl font-bold text-roxo mb-4">Agendamento de Maquiagem</h3>
-  <div class="bg-white p-6 rounded-xl shadow space-y-4">
-    <input id="nome" type="text" placeholder="Seu nome" class="w-full p-3 border rounded">
-    <input id="data" type="date" class="w-full p-3 border rounded">
-    <select id="hora" class="w-full p-3 border rounded">
-      <option value="">Escolha o horário</option>
-      <option>09h - 10h</option>
-      <option>12h - 13h</option>
-      <option>15h - 16h</option>
-    </select>
-    <select id="local" class="w-full p-3 border rounded">
-      <option value="">Local do atendimento</option>
-      <option>Talatona</option>
-      <option>Kilamba</option>
-      <option>Benfica</option>
-      <option>Viana</option>
-      <option>Zango</option>
-    </select>
-    <button onclick="agendarWhatsApp()" class="w-full bg-amarelo text-roxo font-bold py-3 rounded hover:bg-yellow-400 transition">Agendar pelo WhatsApp</button>
+<!-- Loja -->
+<section id="loja">
+  <h2>Loja Online</h2>
+  <div class="products">
+    <div class="product">
+      <img src="https://www.facebook.com/photo.php?fbid=1322081068147408&set=pb.100010365824689.-2207520000&type=3" alt="Crochê">
+      <h3>Croché</h3>
+      <p>Preço: 10.000 Kz</p>
+      <button onclick="addToCart('Crochê', 10000)">Adicionar ao Carrinho</button>
+    </div>
+    <div class="product">
+      <img src="https://www.facebook.com/photo/?fbid=1322081038147411&set=pb.100010365824689.-2207520000" alt="Crochê Praia">
+      <h3>Croché Praia</h3>
+      <p>Preço: 15.000 Kz</p>
+      <button onclick="addToCart('Crochê Praia', 15000)">Adicionar ao Carrinho</button>
+    </div>
+    <div class="product">
+      <img src="https://www.facebook.com/photo.php?fbid=1498145333874313&set=pb.100010365824689.-2207520000&type=3" alt="Vestido">
+      <h3>Vestido</h3>
+      <p>Preço: 20.000 Kz</p>
+      <button onclick="addToCart('Vestido', 20000)">Adicionar ao Carrinho</button>
+    </div>
   </div>
+  <p id="cart-total">Carrinho: 0 produtos | Total: 0 Kz</p>
 </section>
 
-<!-- GOOGLE MAPS -->
-<section class="max-w-4xl mx-auto p-6 mt-12">
-  <h3 class="text-2xl font-bold text-roxo mb-4">Localização em Luanda</h3>
-  <div id="map" class="w-full h-64 rounded-xl shadow"></div>
+<!-- Agendamento -->
+<section id="agendamento">
+  <h2>Agende seu atendimento</h2>
+  <form onsubmit="agendarWhatsApp(event)">
+    <input type="text" id="nome" placeholder="Seu nome" required>
+    <input type="text" id="servico" placeholder="Serviço desejado" required>
+    <input type="date" id="data" required>
+    <textarea id="mensagem" placeholder="Mensagem opcional"></textarea>
+    <button type="submit">Agendar via WhatsApp</button>
+  </form>
 </section>
 
-<!-- BOTÃO WHATSAPP FLUTUANTE -->
-<a href="https://wa.me/244926837464" aria-label="WhatsApp" class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-xl text-white font-bold">WA</a>
+<!-- Contato / WhatsApp -->
+<section id="contato">
+  <h2>Contato</h2>
+  <p>Telefone/WhatsApp: <a href="https://wa.me/244912345678" target="_blank">+244 912 345 678</a></p>
+  <p>Email: patriciapattas@example.com</p>
+</section>
 
-<!-- FOOTER -->
-<footer class="bg-roxo text-white text-center py-4 mt-12">
-  © 2025 Patrícia Pattas – Luanda, Angola
-</footer>
+<!-- Mapa -->
+<section id="mapa">
+  <h2>Localização</h2>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.738829258768!2d13.234567!3d-8.838987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a5189b9e8d12345%3A0x123456789abcdef!2sLuanda!5e0!3m2!1spt-ao!2sao!4v1234567890" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+</section>
 
-<!-- SCRIPTS -->
+<!-- WhatsApp flutuante -->
+<button class="btn-whatsapp" onclick="window.open('https://wa.me/244912345678?text=Olá,%20quero%20agendar%20um%20serviço','_blank')">
+  💬
+</button>
+
+<!-- Scripts -->
 <script>
-/* AGENDAMENTO */
-function agendarWhatsApp() {
-  const nome = document.getElementById('nome').value;
-  const data = document.getElementById('data').value;
-  const hora = document.getElementById('hora').value;
-  const local = document.getElementById('local').value;
-
-  if (!nome || !data || !hora || !local) {
-    alert("Por favor, preencha todos os campos.");
-    return;
+  // Carrinho simples
+  let cart = [];
+  function addToCart(nome, preco) {
+    cart.push({nome, preco});
+    let total = cart.reduce((soma, item) => soma + item.preco, 0);
+    document.getElementById('cart-total').innerText = `Carrinho: ${cart.length} produtos | Total: ${total.toLocaleString()} Kz`;
   }
 
-  const mensagem =
-    `Olá Patrícia Pattas! 👋%0A%0A` +
-    `Gostaria de agendar maquiagem.%0A%0A` +
-    `👤 Nome: ${nome}%0A` +
-    `📅 Data: ${data}%0A` +
-    `⏰ Horário: ${hora}%0A` +
-    `📍 Local: ${local}%0A%0A` +
-    `Fico a aguardar confirmação. Obrigada!`;
-
-  window.open(`https://wa.me/244926837464?text=${mensagem}`, '_blank');
-}
-
-/* CARRINHO */
-let cart = [];
-const cartEl = document.getElementById('cart');
-const cartItems = document.getElementById('cart-items');
-const cartTotal = document.getElementById('cart-total');
-
-document.querySelectorAll('.add-cart').forEach((btn, i) => {
-  btn.addEventListener('click', () => {
-    const product = btn.parentElement;
-    const name = product.querySelector('h3').innerText;
-    const price = parseInt(product.querySelector('p').innerText.replace(/\D/g,''));
-    cart.push({name, price});
-    updateCart();
-  });
-});
-
-function updateCart() {
-  cartItems.innerHTML = '';
-  let total = 0;
-  cart.forEach(item => {
-    total += item.price;
-    const li = document.createElement('li');
-    li.textContent = `${item.name} - ${item.price} AOA`;
-    cartItems.appendChild(li);
-  });
-  cartTotal.textContent = `Total: ${total} AOA`;
-  cartEl.style.display = cart.length ? 'block' : 'none';
-}
-
-document.getElementById('checkout').addEventListener('click', () => {
-  if (!cart.length) return alert("Carrinho vazio!");
-  let mensagem = "Olá Patrícia Pattas! 👋%0A%0AGostaria de comprar:%0A";
-  cart.forEach(item => {
-    mensagem += `- ${item.name} - ${item.price} AOA%0A`;
-  });
-  const total = cart.reduce((acc, item) => acc + item.price, 0);
-  mensagem += `%0ATotal: ${total} AOA%0A%0AFico a aguardar confirmação. Obrigada!`;
-  window.open(`https://wa.me/244926837464?text=${mensagem}`, '_blank');
-});
-
-/* GOOGLE MAPS */
-function initMap() {
-  const location = { lat: -8.858, lng: 13.231 }; // Luanda aproximado
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 12,
-    center: location,
-  });
-  const marker = new google.maps.Marker({ position: location, map: map, title: "Patrícia Pattas" });
-}
+  // Agendamento via WhatsApp
+  function agendarWhatsApp(e) {
+    e.preventDefault();
+    const nome = document.getElementById('nome').value;
+    const servico = document.getElementById('servico').value;
+    const data = document.getElementById('data').value;
+    const msg = document.getElementById('mensagem').value;
+    const texto = `Olá, meu nome é ${nome}. Gostaria de agendar o serviço de ${servico} para o dia ${data}. ${msg}`;
+    const url = `https://wa.me/244912345678?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
+  }
 </script>
 
-<script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script>
 </body>
 </html>
