@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patrícia Pattas – Vendas e Serviços</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            roxo: '#6a0dad',
+            lilas: '#d8b4f8',
+            amarelo: '#f9dc5c',
+            fundo: '#f4f1fa',
+            texto: '#2e2e2e'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-fundo text-texto font-sans">
+
+<!-- HEADER -->
+<header class="bg-roxo text-white text-center py-8 shadow-xl">
+  <h1 class="text-4xl font-extrabold">Patrícia Pattas</h1>
+  <p class="text-xl opacity-90">Vendas e Serviços com elegância e confiança</p>
+</header>
+
+<!-- GALERIA -->
+<section class="container mx-auto p-8">
+  <h2 class="text-3xl font-bold text-roxo text-center mb-8">Galeria de Trabalhos</h2>
+
+  <div class="grid md:grid-cols-3 gap-6 justify-center">
+
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+      <img src="https://graph.facebook.com/1322081068147408/picture?type=large"
+           alt="Crochê Artesanal"
+           class="w-full h-64 object-cover hover:scale-105 transition">
+      <p class="text-center py-2 font-medium">Crochê Artesanal</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+      <img src="https://graph.facebook.com/1322081038147411/picture?type=large"
+           alt="Conjunto Crochê Praia"
+           class="w-full h-64 object-cover hover:scale-105 transition">
+      <p class="text-center py-2 font-medium">Crochê Praia</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+      <img src="https://graph.facebook.com/1498145333874313/picture?type=large"
+           alt="Vestido Crochê"
+           class="w-full h-64 object-cover hover:scale-105 transition">
+      <p class="text-center py-2 font-medium">Vestido em Crochê</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section class="container mx-auto p-8">
+  <h2 class="text-3xl font-bold text-roxo text-center mb-8">Produtos de Crochê</h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <div class="bg-white p-6 rounded-xl shadow-xl text-center">
+      <img src="https://graph.facebook.com/1322081038147411/picture?type=large"
+           class="h-56 w-full object-cover rounded-lg mb-4">
+      <h3 class="text-xl font-bold text-roxo">Conjunto Crochê Praia</h3>
+      <p class="my-2">Preço: <strong>25.000 KZ</strong></p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-xl text-center">
+      <img src="https://graph.facebook.com/1498145333874313/picture?type=large"
+           class="h-56 w-full object-cover rounded-lg mb-4">
+      <h3 class="text-xl font-bold text-roxo">Vestido Praia Crochê</h3>
+      <p class="my-2">Preço: <strong>30.000 KZ</strong></p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-xl text-center">
+      <img src="https://graph.facebook.com/1322081068147408/picture?type=large"
+           class="h-56 w-full object-cover rounded-lg mb-4">
+      <h3 class="text-xl font-bold text-roxo">Peças Artesanais</h3>
+      <p class="my-2">Sob encomenda</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="container mx-auto p-8">
+  <div class="bg-lilas p-6 rounded-xl shadow-xl max-w-md mx-auto">
+    <h2 class="text-2xl font-bold text-roxo mb-4 text-center">Contacto</h2>
+    <p><strong>WhatsApp:</strong> +244 926 837 464</p>
+    <p><strong>Email:</strong> pattasvendas@gmail.com</p>
+    <p class="mt-2">
+      <strong>Facebook:</strong>
+      <a href="https://www.facebook.com/share/1BoyA2k81U/" target="_blank" class="underline text-roxo">
+        Patrícia Pattas
+      </a>
+    </p>
+  </div>
+</section>
+
+<footer class="bg-roxo text-white text-center py-4">
+  © 2025 Patrícia Pattas – Todos os direitos reservados
+</footer>
+
+</body>
+</html>
