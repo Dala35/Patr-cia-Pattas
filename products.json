@@ -1,0 +1,23 @@
+
+  {
+    "id": 1,
+    "name": "Crochê",
+    "price": 2500,
+    "image": "images/croche.jpg",
+    "description": "Crochê artesanal feito à mão"
+  },
+  {
+    "id": 2,
+    "name": "Crochê Praia",
+    "price": 3000,
+    "image": "images/croche_praia.jpg",
+    "description": "Ideal para praia e verão"
+  },
+  {
+    "id": 3,
+    "name": "Vestido",
+    "price": 4500,
+    "image": "images/vestido.jpg",
+    "description": "Vestido elegante para todas as ocasiões"
+  }
+
