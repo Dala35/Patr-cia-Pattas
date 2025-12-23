@@ -34,10 +34,18 @@
     button { background:var(--btn-color); color:#fff; padding:10px 15px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; transition: 0.3s; }
     button:hover { background:var(--btn-hover); }
     .btn-whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; border:none; padding:15px; border-radius:50%; font-size:28px; cursor:pointer; z-index:1000; box-shadow:0 4px 6px rgba(0,0,0,0.3); }
+
+    /* Carrinho */
+    #cart { background:#fff; padding:15px; border:1px solid var(--secondary-color); border-radius:12px; max-width:400px; margin:20px auto; box-shadow:0 4px 8px rgba(0,0,0,0.1); }
+    #cart h3 { text-align:center; color:var(--primary-color); }
+    #cart-items { list-style:none; padding:0; margin:0; }
+    #cart-items li { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid #ddd; }
+    #cart-items li:last-child { border-bottom:none; }
+    #cart-items button { background:#ff4d4d; padding:5px 10px; font-size:12px; border-radius:6px; }
+
     form input, form textarea { width:100%; padding:10px; margin:5px 0; border:1px solid #ccc; border-radius:6px; }
     form button { width:100%; margin-top:10px; }
     iframe { width:100%; border:0; height:400px; border-radius:12px; }
-    #cart-total { margin-top:15px; font-weight:bold; text-align:center; }
   </style>
 </head>
 <body>
@@ -90,7 +98,13 @@
       <button onclick="addToCart('Vestido', 20000)">Adicionar ao Carrinho</button>
     </div>
   </div>
-  <p id="cart-total">Carrinho: 0 produtos | Total: 0 Kz</p>
+
+  <div id="cart">
+    <h3>Carrinho de Compras</h3>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: 0 Kz</p>
+    <button id="checkout-btn" onclick="checkoutWhatsApp()">Finalizar Pedido via WhatsApp</button>
+  </div>
 </section>
 
 <section id="agendamento">
@@ -124,12 +138,46 @@
 </button>
 
 <script>
-  // Carrinho
+  // Carrinho Profissional
   let cart = [];
+
+  function renderCart() {
+    const cartItems = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+    cartItems.innerHTML = '';
+    let total = 0;
+
+    cart.forEach((item, index) => {
+      total += item.preco;
+      const li = document.createElement('li');
+      li.innerHTML = `${item.nome} - ${item.preco.toLocaleString()} Kz <button onclick="removeItem(${index})">❌</button>`;
+      cartItems.appendChild(li);
+    });
+
+    cartTotal.innerText = `Total: ${total.toLocaleString()} Kz`;
+  }
+
   function addToCart(nome, preco) {
     cart.push({nome, preco});
-    let total = cart.reduce((soma, item) => soma + item.preco, 0);
-    document.getElementById('cart-total').innerText = `Carrinho: ${cart.length} produtos | Total: ${total.toLocaleString()} Kz`;
+    renderCart();
+  }
+
+  function removeItem(index) {
+    cart.splice(index, 1);
+    renderCart();
+  }
+
+  function checkoutWhatsApp() {
+    if(cart.length === 0) {
+      alert('Carrinho vazio!');
+      return;
+    }
+    let texto = 'Olá, gostaria de comprar:\n';
+    cart.forEach(item => {
+      texto += `- ${item.nome}: ${item.preco.toLocaleString()} Kz\n`;
+    });
+    const url = `https://wa.me/244912345678?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
   }
 
   // Agendamento via WhatsApp
