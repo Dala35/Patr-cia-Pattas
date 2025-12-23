@@ -4,34 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- SEO básico para Google (Luanda) -->
+  <!-- SEO básico -->
   <title>Patrícia Pattas - Crochê & Maquiagem Luanda</title>
   <meta name="description" content="Patrícia Pattas oferece crochê artesanal, roupas de praia, maquiagem e atendimento personalizado em Luanda. Agende seu serviço ou compre online.">
   <meta name="keywords" content="Crochê, Maquiagem, Luanda, Loja Online, Agendamento WhatsApp, Vestidos, Praia">
   <meta name="author" content="Patrícia Pattas">
 
-  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <!-- CSS básico -->
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; }
-    header { background:#ffcccb; padding:20px; text-align:center; }
-    nav a { margin:0 15px; text-decoration:none; color:#333; font-weight:bold; }
+    :root {
+      --primary-color: #6a0dad; /* Roxo escuro */
+      --secondary-color: #c8a2c8; /* Lilás */
+      --btn-color: #8a2be2; /* Roxo vibrante */
+      --btn-hover: #9f5ede;
+    }
+
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f8f4fc; color:#333; }
+    header { background:var(--primary-color); padding:20px; text-align:center; color:#fff; }
+    nav a { margin:0 15px; text-decoration:none; color:#fff; font-weight:bold; }
     section { padding:50px 20px; }
-    h2 { color:#b22222; }
-    .gallery img { width:100%; max-width:300px; margin:10px; border-radius:8px; }
+    h2 { color:var(--primary-color); text-align:center; margin-bottom:30px; }
+    .gallery { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; }
+    .gallery img { width:100%; max-width:300px; border-radius:12px; transition: transform 0.3s; cursor:pointer; }
+    .gallery img:hover { transform: scale(1.05); }
     .products { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
-    .product { border:1px solid #ccc; padding:15px; border-radius:8px; width:200px; text-align:center; }
-    .btn-whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; border:none; padding:15px; border-radius:50%; font-size:24px; cursor:pointer; z-index:1000; box-shadow:0 4px 6px rgba(0,0,0,0.3); }
-    form input, form textarea { width:100%; padding:10px; margin:5px 0; border:1px solid #ccc; border-radius:4px; }
-    form button { background:#b22222; color:#fff; padding:10px 20px; border:none; border-radius:4px; cursor:pointer; }
-    iframe { width:100%; border:0; height:400px; border-radius:8px; }
+    .product { background:#fff; border:1px solid var(--secondary-color); padding:15px; border-radius:12px; width:220px; text-align:center; box-shadow:0 4px 8px rgba(0,0,0,0.1); }
+    .product img { border-radius:12px; width:100%; height:200px; object-fit:cover; }
+    button { background:var(--btn-color); color:#fff; padding:10px 15px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; transition: 0.3s; }
+    button:hover { background:var(--btn-hover); }
+    .btn-whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; border:none; padding:15px; border-radius:50%; font-size:28px; cursor:pointer; z-index:1000; box-shadow:0 4px 6px rgba(0,0,0,0.3); }
+    form input, form textarea { width:100%; padding:10px; margin:5px 0; border:1px solid #ccc; border-radius:6px; }
+    form button { width:100%; margin-top:10px; }
+    iframe { width:100%; border:0; height:400px; border-radius:12px; }
+    #cart-total { margin-top:15px; font-weight:bold; text-align:center; }
   </style>
 </head>
 <body>
 
-<!-- Header e Navegação -->
 <header>
   <h1>Patrícia Pattas - Crochê & Maquiagem</h1>
   <nav>
@@ -44,13 +54,11 @@
   </nav>
 </header>
 
-<!-- Início -->
 <section id="inicio">
   <h2>Bem-vindo(a) à Patrícia Pattas</h2>
-  <p>Serviços de crochê artesanal e maquiagem profissional em Luanda. Descubra nossos produtos e agende seu atendimento via WhatsApp.</p>
+  <p style="text-align:center;">Serviços de crochê artesanal e maquiagem profissional em Luanda. Descubra nossos produtos e agende seu atendimento via WhatsApp.</p>
 </section>
 
-<!-- Galeria -->
 <section id="galeria">
   <h2>Galeria</h2>
   <div class="gallery">
@@ -60,7 +68,6 @@
   </div>
 </section>
 
-<!-- Loja -->
 <section id="loja">
   <h2>Loja Online</h2>
   <div class="products">
@@ -86,7 +93,6 @@
   <p id="cart-total">Carrinho: 0 produtos | Total: 0 Kz</p>
 </section>
 
-<!-- Agendamento -->
 <section id="agendamento">
   <h2>Agende seu atendimento</h2>
   <form onsubmit="agendarWhatsApp(event)">
@@ -98,14 +104,12 @@
   </form>
 </section>
 
-<!-- Contato / WhatsApp -->
 <section id="contato">
   <h2>Contato</h2>
   <p>Telefone/WhatsApp: <a href="https://wa.me/244912345678" target="_blank">+244 912 345 678</a></p>
   <p>Email: patriciapattas@example.com</p>
 </section>
 
-<!-- Mapa -->
 <section id="mapa">
   <h2>Localização</h2>
   <iframe 
@@ -115,14 +119,12 @@
   </iframe>
 </section>
 
-<!-- WhatsApp flutuante -->
 <button class="btn-whatsapp" onclick="window.open('https://wa.me/244912345678?text=Olá,%20quero%20agendar%20um%20serviço','_blank')">
   💬
 </button>
 
-<!-- Scripts -->
 <script>
-  // Carrinho simples
+  // Carrinho
   let cart = [];
   function addToCart(nome, preco) {
     cart.push({nome, preco});
