@@ -4,18 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- SEO -->
-  <title>Patrícia Pattas | Crochê Artesanal em Luanda</title>
-  <meta name="description" content="Crochê artesanal, moda praia e vestidos em crochê feitos à mão em Luanda. Contacte Patrícia Pattas pelo WhatsApp.">
-  <meta name="keywords" content="crochê, crochê praia, vestido crochê, Luanda, Patrícia Pattas">
-  <meta name="author" content="Patrícia Pattas">
+  <!-- SEO LOCAL -->
+  <title>Patrícia Pattas | Crochê e Maquiagem em Luanda</title>
+  <meta name="description" content="Crochê artesanal e maquiagem profissional ao domicílio em Luanda. Atendimento em Talatona, Kilamba, Benfica, Viana e Zango. Agendamento via WhatsApp.">
+  <meta name="keywords" content="crochê Luanda, maquiagem ao domicílio Luanda, moda crochê Angola, Patrícia Pattas">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://patricia-pattas.github.io/">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Patrícia Pattas – Crochê Artesanal">
-  <meta property="og:description" content="Moda artesanal em crochê feita à mão.">
-  <meta property="og:image" content="https://www.facebook.com/photo.php?fbid=1322081068147408">
+  <meta name="author" content="Patrícia Pattas">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -35,114 +29,107 @@
   </script>
 </head>
 
-<body class="bg-fundo font-sans">
+<body class="bg-fundo font-sans text-gray-800">
 
 <!-- HERO -->
 <header class="bg-roxo text-white text-center py-14 px-6">
   <h1 class="text-4xl font-extrabold">Patrícia Pattas</h1>
-  <p class="text-xl mt-2">Crochê artesanal feito à mão</p>
+  <p class="text-xl mt-2">Crochê artesanal & maquiagem profissional em Luanda</p>
 </header>
 
-<!-- GALERIA -->
-<section class="max-w-6xl mx-auto p-6">
-  <h2 class="text-3xl font-bold text-roxo text-center mb-8">Galeria</h2>
+<!-- AGENDAMENTO -->
+<section class="max-w-4xl mx-auto p-6">
+  <h2 class="text-3xl font-bold text-roxo text-center mb-6">Agendamento de Maquiagem</h2>
 
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-    <img class="rounded-xl shadow object-cover h-64 w-full"
-      src="https://www.facebook.com/photo.php?fbid=1322081068147408&width=800"
-      alt="Crochê artesanal">
+  <div class="bg-white p-6 rounded-xl shadow space-y-4 text-sm">
+    <p><strong>📌 Atendimento apenas com marcação prévia</strong></p>
+    <p>🗓️ Marcar com <strong>mínimo de 3 dias de antecedência</strong></p>
 
-    <img class="rounded-xl shadow object-cover h-64 w-full"
-      src="https://www.facebook.com/photo.php?fbid=1322081038147411&width=800"
-      alt="Crochê praia">
+    <p class="font-bold">⏰ Horários disponíveis:</p>
+    <ul class="list-disc list-inside">
+      <li>09h – 10h</li>
+      <li>12h – 13h</li>
+      <li>15h – 16h</li>
+    </ul>
 
-    <img class="rounded-xl shadow object-cover h-64 w-full"
-      src="https://www.facebook.com/photo.php?fbid=1498145333874313&width=800"
-      alt="Vestido em crochê">
+    <p class="text-red-600 font-semibold">
+      ❗ Não marcar caso não tenha certeza do horário
+    </p>
   </div>
 </section>
 
-<!-- LOJA -->
-<section class="bg-white py-10 px-6">
-  <h2 class="text-3xl font-bold text-roxo text-center mb-8">Loja</h2>
+<!-- FORMULÁRIO DE AGENDAMENTO -->
+<section class="max-w-4xl mx-auto p-6">
+  <h3 class="text-2xl font-bold text-roxo mb-4">Formulário de Agendamento</h3>
 
-  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+  <div class="bg-white p-6 rounded-xl shadow space-y-4">
+    <input id="nome" type="text" placeholder="Seu nome"
+      class="w-full p-3 border rounded">
 
-    <div class="border rounded-xl p-4 text-center shadow">
-      <img src="https://www.facebook.com/photo.php?fbid=1322081038147411&width=600"
-           class="h-48 w-full object-cover rounded mb-3">
-      <h3 class="font-bold">Conjunto Crochê Praia</h3>
-      <p class="font-semibold my-2">25.000 KZ</p>
-      <button onclick="addToCart('Conjunto Crochê Praia',25000)"
-        class="bg-amarelo px-4 py-2 rounded-full font-bold">
-        Adicionar
-      </button>
-    </div>
+    <input id="data" type="date"
+      class="w-full p-3 border rounded">
 
-    <div class="border rounded-xl p-4 text-center shadow">
-      <img src="https://www.facebook.com/photo.php?fbid=1498145333874313&width=600"
-           class="h-48 w-full object-cover rounded mb-3">
-      <h3 class="font-bold">Vestido Crochê</h3>
-      <p class="font-semibold my-2">30.000 KZ</p>
-      <button onclick="addToCart('Vestido Crochê',30000)"
-        class="bg-amarelo px-4 py-2 rounded-full font-bold">
-        Adicionar
-      </button>
-    </div>
+    <select id="hora" class="w-full p-3 border rounded">
+      <option value="">Escolha o horário</option>
+      <option>09h - 10h</option>
+      <option>12h - 13h</option>
+      <option>15h - 16h</option>
+    </select>
 
+    <select id="local" class="w-full p-3 border rounded">
+      <option value="">Local do atendimento</option>
+      <option>Talatona</option>
+      <option>Kilamba</option>
+      <option>Benfica</option>
+      <option>Viana</option>
+      <option>Zango</option>
+    </select>
+
+    <button onclick="agendarWhatsApp()"
+      class="w-full bg-amarelo text-roxo font-bold py-3 rounded hover:bg-yellow-400 transition">
+      Agendar pelo WhatsApp
+    </button>
   </div>
 </section>
 
-<!-- CARRINHO -->
-<section class="max-w-md mx-auto p-6">
-  <h2 class="text-2xl font-bold text-roxo mb-4 text-center">Carrinho</h2>
-
-  <div id="cart" class="bg-white p-4 rounded shadow text-sm"></div>
-  <p class="font-bold mt-4 text-center">Total: <span id="total">0</span> KZ</p>
-
-  <a id="checkout"
-     class="block mt-4 bg-roxo text-white text-center py-3 rounded-full opacity-50 pointer-events-none">
-     Finalizar no WhatsApp
-  </a>
-</section>
-
-<!-- BOTÃO WHATSAPP -->
+<!-- BOTÃO WHATSAPP FLUTUANTE -->
 <a href="https://wa.me/244926837464"
-   aria-label="Falar no WhatsApp"
-   class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-xl">
-  <span class="text-white font-bold">WA</span>
+   aria-label="WhatsApp"
+   class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-xl text-white font-bold">
+  WA
 </a>
 
-<!-- JS -->
+<!-- FOOTER -->
+<footer class="bg-roxo text-white text-center py-4 mt-12">
+  © 2025 Patrícia Pattas – Luanda, Angola
+</footer>
+
+<!-- SCRIPT AGENDAMENTO -->
 <script>
-  const cart = [];
-  const cartDiv = document.getElementById('cart');
-  const totalSpan = document.getElementById('total');
-  const checkout = document.getElementById('checkout');
-  const phone = "244926837464";
+  function agendarWhatsApp() {
+    const nome = document.getElementById('nome').value;
+    const data = document.getElementById('data').value;
+    const hora = document.getElementById('hora').value;
+    const local = document.getElementById('local').value;
 
-  function addToCart(name, price) {
-    cart.push({ name, price });
-    renderCart();
-  }
-
-  function renderCart() {
-    let total = 0;
-    cartDiv.innerHTML = "";
-
-    cart.forEach(item => {
-      total += item.price;
-      cartDiv.innerHTML += `<p>• ${item.name} - ${item.price} KZ</p>`;
-    });
-
-    totalSpan.textContent = total;
-
-    if (cart.length > 0) {
-      checkout.classList.remove("opacity-50","pointer-events-none");
-      checkout.href = `https://wa.me/${phone}?text=Olá! Quero comprar. Total: ${total} KZ`;
+    if (!nome || !data || !hora || !local) {
+      alert("Por favor, preencha todos os campos.");
+      return;
     }
+
+    const mensagem =
+      `Olá Patrícia Pattas! 👋%0A%0A` +
+      `Gostaria de agendar maquiagem.%0A%0A` +
+      `👤 Nome: ${nome}%0A` +
+      `📅 Data: ${data}%0A` +
+      `⏰ Horário: ${hora}%0A` +
+      `📍 Local: ${local}%0A%0A` +
+      `Fico a aguardar confirmação. Obrigada!`;
+
+    window.open(`https://wa.me/244926837464?text=${mensagem}`, '_blank');
   }
 </script>
 
 </body>
 </html>
+
