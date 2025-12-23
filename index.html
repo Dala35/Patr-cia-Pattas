@@ -3,8 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Patrícia Pattas | Crochê & Serviços Profissionais</title>
-  <meta name="description" content="Crochê artesanal, maquiagem profissional ao domicílio e serviços comerciais em Luanda. Patrícia Pattas.">
+
+  <!-- SEO -->
+  <title>Patrícia Pattas | Crochê Artesanal & Serviços em Luanda</title>
+  <meta name="description" content="Crochê artesanal, conjuntos de praia, vestidos em crochê e maquiagem profissional ao domicílio em Luanda. Contacte Patrícia Pattas.">
+  <meta name="keywords" content="crochê, crochê praia, vestido crochê, maquiagem profissional, Luanda, Patrícia Pattas">
+  <meta name="author" content="Patrícia Pattas">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Patrícia Pattas – Crochê & Serviços">
+  <meta property="og:description" content="Moda artesanal em crochê e serviços profissionais em Luanda.">
+  <meta property="og:image" content="https://graph.facebook.com/1322081068147408/picture?type=large">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -30,84 +39,100 @@
 <!-- HERO -->
 <section class="bg-roxo text-white text-center py-16 px-6">
   <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Patrícia Pattas</h1>
-  <p class="text-xl mb-6">Crochê artesanal • Maquiagem profissional • Serviços comerciais</p>
-  <a href="https://wa.me/244926837464"
-     class="bg-amarelo text-roxo font-bold py-3 px-8 rounded-full hover:bg-yellow-400 transition">
-    Falar no WhatsApp
+  <p class="text-xl mb-6">Crochê artesanal • Moda praia • Maquiagem profissional</p>
+  <a href="#produtos" class="bg-amarelo text-roxo font-bold py-3 px-8 rounded-full hover:bg-yellow-400 transition">
+    Ver Produtos
   </a>
 </section>
 
-<!-- GALERIA -->
+<!-- GALERIA EXPANDIDA -->
 <section class="container mx-auto py-14 px-6">
   <h2 class="text-3xl font-bold text-roxo text-center mb-10">Galeria de Trabalhos</h2>
 
-  <div class="grid md:grid-cols-3 gap-8">
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-      <img src="https://graph.facebook.com/1322081068147408/picture?type=large"
-           alt="Crochê Artesanal"
-           class="w-full h-64 object-cover hover:scale-105 transition">
-      <p class="text-center py-3 font-semibold">Crochê Artesanal</p>
-    </div>
+    <img src="https://graph.facebook.com/1322081068147408/picture?type=large"
+         alt="Crochê Artesanal"
+         class="rounded-xl shadow-lg object-cover h-64 w-full hover:scale-105 transition">
 
-    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-      <img src="https://graph.facebook.com/1322081038147411/picture?type=large"
-           alt="Crochê Praia"
-           class="w-full h-64 object-cover hover:scale-105 transition">
-      <p class="text-center py-3 font-semibold">Crochê Praia</p>
-    </div>
+    <img src="https://graph.facebook.com/1322081038147411/picture?type=large"
+         alt="Crochê Praia"
+         class="rounded-xl shadow-lg object-cover h-64 w-full hover:scale-105 transition">
 
-    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-      <img src="https://graph.facebook.com/1498145333874313/picture?type=large"
-           alt="Vestido em Crochê"
-           class="w-full h-64 object-cover hover:scale-105 transition">
-      <p class="text-center py-3 font-semibold">Vestido em Crochê</p>
-    </div>
+    <img src="https://graph.facebook.com/1498145333874313/picture?type=large"
+         alt="Vestido em Crochê"
+         class="rounded-xl shadow-lg object-cover h-64 w-full hover:scale-105 transition">
 
   </div>
 </section>
 
-<!-- PRODUTOS -->
-<section class="bg-white py-14 px-6">
-  <h2 class="text-3xl font-bold text-roxo text-center mb-10">Produtos</h2>
+<!-- LOJA -->
+<section id="produtos" class="bg-white py-14 px-6">
+  <h2 class="text-3xl font-bold text-roxo text-center mb-10">Loja</h2>
 
   <div class="container mx-auto grid md:grid-cols-3 gap-8">
 
+    <!-- Produto 1 -->
     <div class="border rounded-xl p-6 text-center shadow">
       <img src="https://graph.facebook.com/1322081038147411/picture?type=large"
            class="h-52 w-full object-cover rounded mb-4">
-      <h3 class="text-xl font-bold text-roxo">Conjunto Crochê Praia</h3>
-      <p class="mt-2 text-lg font-semibold">25.000 KZ</p>
+      <h3 class="font-bold text-lg">Conjunto Crochê Praia</h3>
+      <p class="font-semibold my-2">25.000 KZ</p>
+      <button onclick="addToCart('Conjunto Crochê Praia',25000)"
+              class="bg-amarelo text-roxo font-bold py-2 px-4 rounded-full w-full hover:bg-yellow-400">
+        Adicionar ao carrinho
+      </button>
     </div>
 
+    <!-- Produto 2 -->
     <div class="border rounded-xl p-6 text-center shadow">
       <img src="https://graph.facebook.com/1498145333874313/picture?type=large"
            class="h-52 w-full object-cover rounded mb-4">
-      <h3 class="text-xl font-bold text-roxo">Vestido Praia Crochê</h3>
-      <p class="mt-2 text-lg font-semibold">30.000 KZ</p>
+      <h3 class="font-bold text-lg">Vestido Praia Crochê</h3>
+      <p class="font-semibold my-2">30.000 KZ</p>
+      <button onclick="addToCart('Vestido Praia Crochê',30000)"
+              class="bg-amarelo text-roxo font-bold py-2 px-4 rounded-full w-full hover:bg-yellow-400">
+        Adicionar ao carrinho
+      </button>
     </div>
 
+    <!-- Produto 3 -->
     <div class="border rounded-xl p-6 text-center shadow">
       <img src="https://graph.facebook.com/1322081068147408/picture?type=large"
            class="h-52 w-full object-cover rounded mb-4">
-      <h3 class="text-xl font-bold text-roxo">Peças Sob Encomenda</h3>
-      <p class="mt-2 text-lg font-semibold">Preço sob consulta</p>
+      <h3 class="font-bold text-lg">Peças Sob Encomenda</h3>
+      <p class="font-semibold my-2">Sob consulta</p>
+      <button onclick="addToCart('Peças Sob Encomenda',0)"
+              class="bg-amarelo text-roxo font-bold py-2 px-4 rounded-full w-full hover:bg-yellow-400">
+        Consultar
+      </button>
     </div>
 
   </div>
 </section>
 
+<!-- CARRINHO -->
+<section class="container mx-auto py-10 px-6 max-w-md">
+  <h2 class="text-2xl font-bold text-roxo mb-4 text-center">Carrinho</h2>
+
+  <div id="cart" class="bg-white p-4 rounded-xl shadow space-y-2 text-sm"></div>
+
+  <p class="font-bold text-lg mt-4 text-center">
+    Total: <span id="total">0</span> KZ
+  </p>
+
+  <a id="checkout"
+     class="block mt-4 bg-roxo text-white text-center py-3 rounded-full opacity-50 pointer-events-none">
+    Finalizar no WhatsApp
+  </a>
+</section>
+
 <!-- CONTACTO -->
-<section class="py-14 px-6">
-  <div class="bg-lilas max-w-md mx-auto p-8 rounded-xl shadow-xl text-center">
-    <h2 class="text-2xl font-bold text-roxo mb-4">Contacto</h2>
-    <p class="mb-2"><strong>WhatsApp:</strong> +244 926 837 464</p>
-    <p class="mb-2"><strong>Email:</strong> pattasvendas@gmail.com</p>
-    <a href="https://www.facebook.com/share/1BoyA2k81U/"
-       target="_blank"
-       class="text-roxo underline font-semibold">
-      Facebook – Patrícia Pattas
-    </a>
+<section class="py-10 px-6">
+  <div class="bg-lilas max-w-md mx-auto p-6 rounded-xl shadow text-center">
+    <h2 class="text-xl font-bold text-roxo mb-3">Contacto</h2>
+    <p>📱 +244 926 837 464</p>
+    <p>📧 pattasvendas@gmail.com</p>
   </div>
 </section>
 
@@ -115,6 +140,46 @@
 <footer class="bg-roxo text-white text-center py-4">
   © 2025 Patrícia Pattas – Todos os direitos reservados
 </footer>
+
+<!-- BOTÃO WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/244926837464"
+   target="_blank"
+   class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-xl hover:scale-110 transition">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M20.52 3.48A11.91 11.91 0 0012.07 0C5.41 0 .03 5.38.03 12.04c0 2.12.55 4.19 1.6 6.03L0 24l6.12-1.6a11.97 11.97 0 005.95 1.53h.01c6.66 0 12.04-5.38 12.04-12.04 0-3.21-1.25-6.23-3.6-8.41z"/>
+  </svg>
+</a>
+
+<!-- JS CARRINHO -->
+<script>
+  const cart = [];
+  const cartDiv = document.getElementById('cart');
+  const totalSpan = document.getElementById('total');
+  const checkout = document.getElementById('checkout');
+  const WHATSAPP = "244926837464";
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    updateCart();
+  }
+
+  function updateCart() {
+    cartDiv.innerHTML = '';
+    let total = 0;
+
+    cart.forEach(item => {
+      total += item.price;
+      cartDiv.innerHTML += `<div>• ${item.name} - ${item.price} KZ</div>`;
+    });
+
+    totalSpan.textContent = total;
+
+    if (cart.length) {
+      checkout.classList.remove('opacity-50','pointer-events-none');
+      checkout.href = `https://wa.me/${WHATSAPP}?text=Olá! Quero finalizar a compra. Total: ${total} KZ`;
+    }
+  }
+</script>
 
 </body>
 </html>
