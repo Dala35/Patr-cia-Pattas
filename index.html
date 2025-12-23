@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- SEO LOCAL -->
-  <title>Patrícia Pattas | Crochê e Maquiagem em Luanda</title>
-  <meta name="description" content="Crochê artesanal e maquiagem profissional ao domicílio em Luanda. Atendimento em Talatona, Kilamba, Benfica, Viana e Zango. Agendamento via WhatsApp.">
-  <meta name="keywords" content="crochê Luanda, maquiagem ao domicílio Luanda, moda crochê Angola, Patrícia Pattas">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Patrícia Pattas">
+<!-- SEO LOCAL -->
+<title>Patrícia Pattas | Crochê & Maquiagem em Luanda</title>
+<meta name="description" content="Crochê artesanal e maquiagem profissional ao domicílio em Luanda. Loja de produtos e agendamento via WhatsApp.">
+<meta name="keywords" content="crochê Luanda, maquiagem ao domicílio Luanda, moda crochê Angola, loja crochê">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Patrícia Pattas">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            roxo: '#6a0dad',
-            lilas: '#d8b4f8',
-            amarelo: '#f9dc5c',
-            fundo: '#f4f1fa'
-          }
-        }
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        roxo: '#6a0dad',
+        lilas: '#d8b4f8',
+        amarelo: '#f9dc5c',
+        fundo: '#f4f1fa'
       }
     }
-  </script>
+  }
+}
+</script>
 </head>
-
 <body class="bg-fundo font-sans text-gray-800">
 
 <!-- HERO -->
@@ -37,45 +35,55 @@
   <p class="text-xl mt-2">Crochê artesanal & maquiagem profissional em Luanda</p>
 </header>
 
-<!-- AGENDAMENTO -->
-<section class="max-w-4xl mx-auto p-6">
-  <h2 class="text-3xl font-bold text-roxo text-center mb-6">Agendamento de Maquiagem</h2>
+<!-- LOJA -->
+<section class="max-w-6xl mx-auto p-6">
+  <h2 class="text-3xl font-bold text-roxo text-center mb-6">Loja de Produtos</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    
+    <div class="bg-white p-4 rounded-xl shadow">
+      <img src="https://www.facebook.com/photo.php?fbid=1322081068147408&set=pb.100010365824689.-2207520000&type=3" alt="Crochê" class="rounded mb-2">
+      <h3 class="font-bold text-lg">Crochê Artesanal</h3>
+      <p class="text-roxo font-semibold">Preço: 15.000 AOA</p>
+      <button class="add-cart bg-amarelo text-roxo font-bold py-2 px-4 rounded mt-2 w-full">Adicionar ao Carrinho</button>
+    </div>
 
-  <div class="bg-white p-6 rounded-xl shadow space-y-4 text-sm">
-    <p><strong>📌 Atendimento apenas com marcação prévia</strong></p>
-    <p>🗓️ Marcar com <strong>mínimo de 3 dias de antecedência</strong></p>
+    <div class="bg-white p-4 rounded-xl shadow">
+      <img src="https://www.facebook.com/photo/?fbid=1322081038147411&set=pb.100010365824689.-2207520000" alt="Crochê Praia" class="rounded mb-2">
+      <h3 class="font-bold text-lg">Crochê Praia</h3>
+      <p class="text-roxo font-semibold">Preço: 20.000 AOA</p>
+      <button class="add-cart bg-amarelo text-roxo font-bold py-2 px-4 rounded mt-2 w-full">Adicionar ao Carrinho</button>
+    </div>
 
-    <p class="font-bold">⏰ Horários disponíveis:</p>
-    <ul class="list-disc list-inside">
-      <li>09h – 10h</li>
-      <li>12h – 13h</li>
-      <li>15h – 16h</li>
-    </ul>
+    <div class="bg-white p-4 rounded-xl shadow">
+      <img src="https://www.facebook.com/photo.php?fbid=1498145333874313&set=pb.100010365824689.-2207520000&type=3" alt="Vestido" class="rounded mb-2">
+      <h3 class="font-bold text-lg">Vestido</h3>
+      <p class="text-roxo font-semibold">Preço: 35.000 AOA</p>
+      <button class="add-cart bg-amarelo text-roxo font-bold py-2 px-4 rounded mt-2 w-full">Adicionar ao Carrinho</button>
+    </div>
 
-    <p class="text-red-600 font-semibold">
-      ❗ Não marcar caso não tenha certeza do horário
-    </p>
   </div>
 </section>
 
-<!-- FORMULÁRIO DE AGENDAMENTO -->
-<section class="max-w-4xl mx-auto p-6">
-  <h3 class="text-2xl font-bold text-roxo mb-4">Formulário de Agendamento</h3>
+<!-- CARRINHO FLUTUANTE -->
+<div id="cart" class="fixed right-6 bottom-20 bg-white shadow-xl p-4 rounded-xl w-80 max-w-xs hidden">
+  <h3 class="text-xl font-bold mb-2">Carrinho 🛒</h3>
+  <ul id="cart-items" class="space-y-1"></ul>
+  <p class="font-semibold mt-2" id="cart-total">Total: 0 AOA</p>
+  <button id="checkout" class="bg-green-500 text-white w-full py-2 rounded mt-2 font-bold">Finalizar via WhatsApp</button>
+</div>
 
+<!-- FORMULÁRIO AGENDAMENTO -->
+<section class="max-w-4xl mx-auto p-6 mt-12">
+  <h3 class="text-2xl font-bold text-roxo mb-4">Agendamento de Maquiagem</h3>
   <div class="bg-white p-6 rounded-xl shadow space-y-4">
-    <input id="nome" type="text" placeholder="Seu nome"
-      class="w-full p-3 border rounded">
-
-    <input id="data" type="date"
-      class="w-full p-3 border rounded">
-
+    <input id="nome" type="text" placeholder="Seu nome" class="w-full p-3 border rounded">
+    <input id="data" type="date" class="w-full p-3 border rounded">
     <select id="hora" class="w-full p-3 border rounded">
       <option value="">Escolha o horário</option>
       <option>09h - 10h</option>
       <option>12h - 13h</option>
       <option>15h - 16h</option>
     </select>
-
     <select id="local" class="w-full p-3 border rounded">
       <option value="">Local do atendimento</option>
       <option>Talatona</option>
@@ -84,52 +92,101 @@
       <option>Viana</option>
       <option>Zango</option>
     </select>
-
-    <button onclick="agendarWhatsApp()"
-      class="w-full bg-amarelo text-roxo font-bold py-3 rounded hover:bg-yellow-400 transition">
-      Agendar pelo WhatsApp
-    </button>
+    <button onclick="agendarWhatsApp()" class="w-full bg-amarelo text-roxo font-bold py-3 rounded hover:bg-yellow-400 transition">Agendar pelo WhatsApp</button>
   </div>
 </section>
 
+<!-- GOOGLE MAPS -->
+<section class="max-w-4xl mx-auto p-6 mt-12">
+  <h3 class="text-2xl font-bold text-roxo mb-4">Localização em Luanda</h3>
+  <div id="map" class="w-full h-64 rounded-xl shadow"></div>
+</section>
+
 <!-- BOTÃO WHATSAPP FLUTUANTE -->
-<a href="https://wa.me/244926837464"
-   aria-label="WhatsApp"
-   class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-xl text-white font-bold">
-  WA
-</a>
+<a href="https://wa.me/244926837464" aria-label="WhatsApp" class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-xl text-white font-bold">WA</a>
 
 <!-- FOOTER -->
 <footer class="bg-roxo text-white text-center py-4 mt-12">
   © 2025 Patrícia Pattas – Luanda, Angola
 </footer>
 
-<!-- SCRIPT AGENDAMENTO -->
+<!-- SCRIPTS -->
 <script>
-  function agendarWhatsApp() {
-    const nome = document.getElementById('nome').value;
-    const data = document.getElementById('data').value;
-    const hora = document.getElementById('hora').value;
-    const local = document.getElementById('local').value;
+/* AGENDAMENTO */
+function agendarWhatsApp() {
+  const nome = document.getElementById('nome').value;
+  const data = document.getElementById('data').value;
+  const hora = document.getElementById('hora').value;
+  const local = document.getElementById('local').value;
 
-    if (!nome || !data || !hora || !local) {
-      alert("Por favor, preencha todos os campos.");
-      return;
-    }
-
-    const mensagem =
-      `Olá Patrícia Pattas! 👋%0A%0A` +
-      `Gostaria de agendar maquiagem.%0A%0A` +
-      `👤 Nome: ${nome}%0A` +
-      `📅 Data: ${data}%0A` +
-      `⏰ Horário: ${hora}%0A` +
-      `📍 Local: ${local}%0A%0A` +
-      `Fico a aguardar confirmação. Obrigada!`;
-
-    window.open(`https://wa.me/244926837464?text=${mensagem}`, '_blank');
+  if (!nome || !data || !hora || !local) {
+    alert("Por favor, preencha todos os campos.");
+    return;
   }
+
+  const mensagem =
+    `Olá Patrícia Pattas! 👋%0A%0A` +
+    `Gostaria de agendar maquiagem.%0A%0A` +
+    `👤 Nome: ${nome}%0A` +
+    `📅 Data: ${data}%0A` +
+    `⏰ Horário: ${hora}%0A` +
+    `📍 Local: ${local}%0A%0A` +
+    `Fico a aguardar confirmação. Obrigada!`;
+
+  window.open(`https://wa.me/244926837464?text=${mensagem}`, '_blank');
+}
+
+/* CARRINHO */
+let cart = [];
+const cartEl = document.getElementById('cart');
+const cartItems = document.getElementById('cart-items');
+const cartTotal = document.getElementById('cart-total');
+
+document.querySelectorAll('.add-cart').forEach((btn, i) => {
+  btn.addEventListener('click', () => {
+    const product = btn.parentElement;
+    const name = product.querySelector('h3').innerText;
+    const price = parseInt(product.querySelector('p').innerText.replace(/\D/g,''));
+    cart.push({name, price});
+    updateCart();
+  });
+});
+
+function updateCart() {
+  cartItems.innerHTML = '';
+  let total = 0;
+  cart.forEach(item => {
+    total += item.price;
+    const li = document.createElement('li');
+    li.textContent = `${item.name} - ${item.price} AOA`;
+    cartItems.appendChild(li);
+  });
+  cartTotal.textContent = `Total: ${total} AOA`;
+  cartEl.style.display = cart.length ? 'block' : 'none';
+}
+
+document.getElementById('checkout').addEventListener('click', () => {
+  if (!cart.length) return alert("Carrinho vazio!");
+  let mensagem = "Olá Patrícia Pattas! 👋%0A%0AGostaria de comprar:%0A";
+  cart.forEach(item => {
+    mensagem += `- ${item.name} - ${item.price} AOA%0A`;
+  });
+  const total = cart.reduce((acc, item) => acc + item.price, 0);
+  mensagem += `%0ATotal: ${total} AOA%0A%0AFico a aguardar confirmação. Obrigada!`;
+  window.open(`https://wa.me/244926837464?text=${mensagem}`, '_blank');
+});
+
+/* GOOGLE MAPS */
+function initMap() {
+  const location = { lat: -8.858, lng: 13.231 }; // Luanda aproximado
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 12,
+    center: location,
+  });
+  const marker = new google.maps.Marker({ position: location, map: map, title: "Patrícia Pattas" });
+}
 </script>
 
+<script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script>
 </body>
 </html>
-
